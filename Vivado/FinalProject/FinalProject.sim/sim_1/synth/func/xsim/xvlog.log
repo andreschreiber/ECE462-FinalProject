@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/Processor/FinalProject/FinalProject.sim/sim_1/synth/func/xsim/TopLevel_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU32Bit
+INFO: [VRFC 10-311] analyzing module HiLoRegisters
+INFO: [VRFC 10-311] analyzing module InstructionCacheMemory
+INFO: [VRFC 10-311] analyzing module InstructionMemoryCached
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1__2
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1__6
+INFO: [VRFC 10-311] analyzing module Mux32Bit3To1
+INFO: [VRFC 10-311] analyzing module Mux32Bit3To1__1
+INFO: [VRFC 10-311] analyzing module Mux32Bit4To1
+INFO: [VRFC 10-311] analyzing module PCAdder
+INFO: [VRFC 10-311] analyzing module PipelinedRegisters
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-311] analyzing module ShiftAdder
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/Processor/FinalProject/FinalProject.srcs/sim_1/new/TopLevel_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TopLevel_tb

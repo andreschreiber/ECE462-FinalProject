@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Apr 20 22:27:08 2022
+# Process ID: 4780
+# Current directory: C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.runs/synth_1
+# Command line: vivado.exe -log TopLevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevel.tcl
+# Log file: C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.runs/synth_1/TopLevel.vds
+# Journal file: C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.runs/synth_1\vivado.jou
+# Running On: DESKTOP-L6DCBM7, OS: Windows, CPU Frequency: 1997 MHz, CPU Physical cores: 4, Host memory: 16972 MB
+#-----------------------------------------------------------
+source TopLevel.tcl -notrace

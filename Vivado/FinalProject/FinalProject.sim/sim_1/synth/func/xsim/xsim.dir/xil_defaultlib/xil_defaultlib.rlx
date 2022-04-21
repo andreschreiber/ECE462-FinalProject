@@ -1,0 +1,6 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/Andre/Desktop/Processor/FinalProject/FinalProject.sim/sim_1/synth/func/xsim/TopLevel_tb_func_synth.v,1650323302,verilog,,C:/Users/Andre/Desktop/Processor/FinalProject/FinalProject.srcs/sim_1/new/TopLevel_tb.v,,ALU32Bit;HiLoRegisters;InstructionCacheMemory;InstructionMemoryCached;Mux32Bit2To1__2;Mux32Bit2To1__6;Mux32Bit3To1;Mux32Bit3To1__1;Mux32Bit4To1;PCAdder;PipelinedRegisters;ProgramCounter;RegisterFile;ShiftAdder;TopLevel;glbl,,,,,,,,
+C:/Users/Andre/Desktop/Processor/FinalProject/FinalProject.srcs/sim_1/new/TopLevel_tb.v,1650260031,verilog,,,,TopLevel_tb,,,,,,,,
