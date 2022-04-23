@@ -81,7 +81,6 @@ module DataMemorySlow(
                 m_addr <= addr;
                 m_ren <= r_en;
                 m_wen <= w_en;
-                stall_count <= 0;
                 next_stall_count <= 0;
                 if(r_en || w_en) begin
                     next_state <= STATE_STALL;
@@ -111,7 +110,6 @@ module DataMemorySlow(
                 m_data <= m_data;
                 m_ren <= m_ren;
                 m_wen <= m_wen;
-                stall_count <= 0;
                 next_stall_count <= 0;
                 if(m_wen) begin
                     memory[m_addr[ADDR_SIZE-1:2]] <= m_data;

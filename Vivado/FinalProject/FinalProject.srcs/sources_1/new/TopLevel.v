@@ -18,6 +18,11 @@ module TopLevel(Clk, Rst, debug_Lo, debug_Hi, debug_Write, debug_PC);
     output [31:0] debug_Write;
     output [31:0] debug_PC;
     
+    localparam ADDR_SIZE = 12;
+    localparam CACHE_SETS = 16;
+    localparam LINE_WORDS = 4;
+    localparam MEM_BLOCKS = 256;
+    
     wire instrHit;
     wire dataHit;
     wire pipeline_wen;
@@ -71,7 +76,7 @@ module TopLevel(Clk, Rst, debug_Lo, debug_Hi, debug_Write, debug_PC);
     // OLD - original from ECE369
     //InstructionMemory instrMemory(.Address(fetchPCAddr), .Instruction(fetchInstruction));
     // Variant 1 - cached
-    InstructionMemoryCached instrMemory(.clk(Clk), .rst(Rst), .r_en(1'b1), .r_addr(fetchPCAddr), .r_data(fetchInstruction), .hit(instrHit));
+    InstructionMemoryCached #(.ADDR_SIZE(ADDR_SIZE), .CACHE_SETS(CACHE_SETS), .LINE_WORDS(LINE_WORDS), .MEM_BLOCKS(MEM_BLOCKS)) instrMemory(.clk(Clk), .rst(Rst), .r_en(1'b1), .r_addr(fetchPCAddr), .r_data(fetchInstruction), .hit(instrHit));
     // Variant 2 - very slow (no cache, slow memory)
     //InstructionMemorySlow instrMemory(.clk(Clk), .rst(Rst), .r_en(1'b1), .r_addr(fetchPCAddr), .r_data(fetchInstruction), .hit(instrHit));
     // Variant 3 - instant
@@ -212,7 +217,7 @@ module TopLevel(Clk, Rst, debug_Lo, debug_Hi, debug_Write, debug_PC);
     //                      .MemByte(memMemByte), .MemHalf(memMemHalf));
     
     // Variant 1 - cached
-    DataMemoryCached dataMemory(.clk(Clk), .rst(Rst), .r_en(memMemRead), .w_en(memMemWrite), .addr(memALUResult),
+    DataMemoryCached #(.ADDR_SIZE(ADDR_SIZE), .CACHE_SETS(CACHE_SETS), .LINE_WORDS(LINE_WORDS), .MEM_BLOCKS(MEM_BLOCKS)) dataMemory(.clk(Clk), .rst(Rst), .r_en(memMemRead), .w_en(memMemWrite), .addr(memALUResult),
                                 .r_data(memMemoryReadData), .w_data(memDataMemWriteData), .hit(dataHit));
     // Variant 2 - very slow (no cache and slow memory)
     //DataMemorySlow dataMemory(.clk(Clk), .rst(Rst), .r_en(memMemRead), .w_en(memMemWrite), .addr(memALUResult),

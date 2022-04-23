@@ -30,15 +30,14 @@ module DataMainMemory(
         $readmemh("Data_memory.txt", memory);
     end
     
+    integer i;
     always @(*) begin
         if(w_en) begin
             memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][addr[($clog2(LINE_WORDS)+1):2]] = w_data;
         end
-        r_data = {
-            memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][3],
-            memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][2],
-            memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][1],
-            memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][0]
-        };
+        for(i = LINE_WORDS-1; i >= 0; i = i - 1) begin
+            r_data[i*32 +: 32] <= memory[addr[(ADDR_SIZE-1):($clog2(LINE_WORDS)+2)]][i];
+        end
     end
+
 endmodule

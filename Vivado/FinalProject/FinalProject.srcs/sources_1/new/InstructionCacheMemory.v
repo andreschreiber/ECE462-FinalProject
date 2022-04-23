@@ -48,44 +48,46 @@ module InstructionCacheMemory(
         end
     end
     
+
+    // 7:4 = (($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)
+    // 8 = ($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)
     // Read
     always @(*) begin
-        if(r_en && valid[addr[7:4]][0] && tag[addr[7:4]][0] == addr[ADDR_SIZE-1:8]) begin
+        if(r_en && valid[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0] && tag[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0] == addr[ADDR_SIZE-1:($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)]) begin
             hit <= 1'b1;
-            r_data <= cache[addr[7:4]][0][addr[3:2]];
-            lru[addr[7:4]] <= 1'b1;
+            r_data <= cache[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0][addr[($clog2(LINE_WORDS)+1):2]];
+            lru[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]] <= 1'b1;
         end
-        else if(r_en && valid[addr[7:4]][1] && tag[addr[7:4]][1] == addr[ADDR_SIZE-1:8]) begin
+        else if(r_en && valid[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1] && tag[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1] == addr[ADDR_SIZE-1:($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)]) begin
             hit <= 1'b1;
-            r_data <= cache[addr[7:4]][1][addr[3:2]];
-            lru[addr[7:4]] <= 1'b0;
+            r_data <= cache[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1][addr[($clog2(LINE_WORDS)+1):2]];
+            lru[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]] <= 1'b0;
         end
         else begin
             hit <= 1'b0;
             r_data <= 32'hXXXXXXXX;
-            lru[addr[7:4]] <= lru[addr[7:4]];
+            lru[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]] <= lru[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]];
         end
     end
     
+    integer j;
     // Evict
     always @(posedge clk) begin
         if(e_en) begin
-            case(lru[addr[7:4]])
+            case(lru[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]])
                 1'b1: begin
-                    cache[addr[7:4]][1][0] <= e_data[31:0];
-                    cache[addr[7:4]][1][1] <= e_data[63:32];
-                    cache[addr[7:4]][1][2] <= e_data[95:64];
-                    cache[addr[7:4]][1][3] <= e_data[127:96];
-                    tag[addr[7:4]][1] <= addr[ADDR_SIZE-1:8];
-                    valid[addr[7:4]][1] <= 1'b1;
+                    for(j = LINE_WORDS-1; j >= 0; j = j - 1) begin
+                        cache[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1][j] <= e_data[j*32 +: 32];
+                    end
+                    tag[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1] <= addr[ADDR_SIZE-1:($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)];
+                    valid[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][1] <= 1'b1;
                 end
                 default: begin // 1'b0
-                    cache[addr[7:4]][0][0] <= e_data[31:0];
-                    cache[addr[7:4]][0][1] <= e_data[63:32];
-                    cache[addr[7:4]][0][2] <= e_data[95:64];
-                    cache[addr[7:4]][0][3] <= e_data[127:96];
-                    tag[addr[7:4]][0] <= addr[ADDR_SIZE-1:8];
-                    valid[addr[7:4]][0] <= 1'b1;
+                    for(j = LINE_WORDS-1; j >= 0; j = j - 1) begin
+                        cache[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0][j] <= e_data[j*32 +: 32];
+                    end
+                    tag[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0] <= addr[ADDR_SIZE-1:($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)];
+                    valid[addr[(($clog2(CACHE_SETS)+$clog2(LINE_WORDS)+2)-1):($clog2(LINE_WORDS)+2)]][0] <= 1'b1;
                 end
             endcase
         end

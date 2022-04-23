@@ -1,0 +1,50 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/ALU32Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU32Bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/DataCacheMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataCacheMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/DataMainMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMainMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/DataMemoryCached.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryCached
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Forwarding.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/HazardDetection.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardDetection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/HiLoRegisters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HiLoRegisters
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/InstructionCacheMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionCacheMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/InstructionMainMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMainMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/InstructionMemoryCached.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemoryCached
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux17Bit2To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux17Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux32Bit2To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux32Bit3To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32Bit3To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux32Bit4To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32Bit4To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux5Bit2To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/Mux8Bit2To1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux8Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/PCAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/PipelinedRegisters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PipelinedRegisters
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/ProgramCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/ShiftAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ShiftAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/SignExtension.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtension
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sources_1/new/TopLevel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Andre/Desktop/UASeniorYear/ECE462/project/delivery/ECE462-FinalProject/Vivado/FinalProject/FinalProject.srcs/sim_1/new/TopLevel_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TopLevel_tb
